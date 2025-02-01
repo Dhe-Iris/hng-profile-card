@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="profile-card-container" data-testid="profileCardContainer">
+      <div class="profile-card" data-testid="profileCard">
+        <div class="profile-card-inner" data-testid="profileCardInner">
+          <div class="profile-card-front" data-testid="profileCardFront">
+            <h2 data-testid="fullName">Kolade Dolapo Haliah (IRIS)</h2>
+            <p data-testid="jobTitle">Frontend Developer Intern</p>
+            <button data-testid="button">Hover me</button>
+          </div>
+
+          <div class="profile-card-back" data-testid="profileCardBack">
+            <div class="profile-picture" data-testid="profilePictureContainer">
+              <img
+                src="images/profile-pic.jpg"
+                alt="Profile Picture"
+                data-testid="profilePicture"
+                class="profile-picture"
+              />
+            </div>
+            <h2 data-testid="fullNameBack">
+              Kolade <br /><span>Dolapo H.</span>
+            </h2>
+            <p data-testid="shortBio" class="bio">
+              A passionate and dedicated Frontend Developer intern with a keen
+              eye for detail.
+            </p>
+            <div data-testid="socialLinks" class="social-links">
+              <a href="mailto:dolapog44@gmail.com" data-testid="emailAddress">
+                <img src="images/gmail.png" alt="gmail-icon" />
+              </a>
+              <a
+                href="https://linkedin.com/in/yourprofile"
+                target="_blank"
+                data-testid="linkedinLink"
+              >
+                <img src="images/linkedin.png" alt="linkedin-icon" />
+              </a>
+              <a
+                href="https://github.com/yourprofile"
+                target="_blank"
+                data-testid="githubLink"
+              >
+                <img src="images/github.png" alt="github-icon" />
+              </a>
+            </div>
+            <footer>
+              <div data-testid="currentLocation" class="current-location">
+                <img src="images/gps.png" alt="gps-icon" class="gps" />
+                <p>Lagos, Nigeria</p>
+              </div>
+
+              <div data-testid="currentTimeUTC" class="current-time">
+                <img src="images/time.png" alt="time-icon" />
+                <p>Current Time: <span id="utc-time"></span></p>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>

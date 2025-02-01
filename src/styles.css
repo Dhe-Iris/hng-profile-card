@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Background and container styles */
+.profile-card-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3dbf6, #a99bf9);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+/* Main card layout */
+.profile-card {
+  width: 350px;
+  height: 500px;
+  background: #fff;
+  border-radius: 15px;
+  perspective: 1000px; /* Enables 3D effect */
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  overflow: hidden;
+}
+
+/* Inner container for flip effect */
+.profile-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.profile-card:hover .profile-card-inner {
+  transform: rotateY(180deg); /* Flip the card */
+}
+
+/* Front and back of the profile card */
+.profile-card-front,
+.profile-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+/* Front card styling */
+.profile-card-front {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/profile-pic.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.profile-card-front h2 {
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.profile-card-front p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.profile-card-front button {
+  width: 120px;
+  border: 1px solid #fff;
+  background: transparent;
+  border-radius: 50px;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.profile-card-front button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Back card styling */
+.profile-card-back {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  transform: rotateY(180deg); /* Initially hidden */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for profile picture */
+  margin-top: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-card-back h2 {
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 8px;
+}
+
+.profile-card-back h2 span {
+  font-weight: 400;
+}
+
+.bio {
+  font-size: 15px;
+  text-align: left;
+  color: #666;
+}
+
+.current-location {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.current-location img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px 0;
+  margin-top: 5px;
+}
+
+.social-links img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+  transform: scale(1.1); /* Hover effect for social icons */
+}
+
+.current-time {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.current-time span {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.current-time img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
